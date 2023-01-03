@@ -1,0 +1,39 @@
+# Code for matrix addition
+
+matrix1 = []
+matrix2 = []
+result_matrix = []
+rows1 = int(input('Enter number of rows for 1st matrix :'))
+columns1 = int(input('Enter number of columns for 1st matrix :'))
+rows2 = int(input('Enter number of rows for 2nd matrix :'))
+columns2 = int(input('Enter number of columns for 2nd matrix :'))
+
+if columns1 != columns2 or rows1 != rows2:
+    print("Matrix addition not possible!")
+    exit()
+
+
+print("\nFor matrix 1 : ")
+for i in range(rows1):
+    temp = []
+    for j in range(columns1):
+        temp.append(int(input(f'Enter element a{i+1}{j+1} :')))
+    matrix1.append(temp)
+
+    print("\nFor matrix 2 : ")
+    for i in range(rows2):
+        temp = []
+for j in range(columns2):
+    temp.append(int(input(f'Enter element b{i+1}{j+1} :')))
+    matrix2.append(temp)
+
+    for i in range(rows1): temp = []
+    for j in range(columns1): temp.append(matrix1[i][j] + matrix2[i][j])
+    
+    result_matrix.append(temp)
+
+    print("Result matrix after addition :")
+    for row in result_matrix:
+      for element in row:
+        print(element, end=' ')
+    print('\n', end='')
